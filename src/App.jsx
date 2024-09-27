@@ -1,0 +1,22 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Dashboard from './pages/Dashboard'
+import { Nav } from './components/Nav'
+import AppContextProvider from './context/AppContext'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <AppContextProvider>
+        <Nav />
+        <Dashboard />
+      </AppContextProvider>
+    </>
+  )
+}
+
+export default App
